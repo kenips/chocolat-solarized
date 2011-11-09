@@ -1,0 +1,179 @@
+(author [Michael Sheets])
+
+(!default
+    (caret [rgba(0.654902, 0.654902, 0.654902, 1.000000)])
+    (selection [rgba(0.866667, 0.941176, 1.000000, 0.200000)])
+    (line-highlight [rgba(1.000000, 1.000000, 1.000000, 0.031373)])
+    (invisibles [rgba(1.000000, 1.000000, 1.000000, 0.250980)])
+    (color [rgba(0.576023, 0.630412, 0.631349, 1.000000)])
+    (background [rgba(0.044786, 0.124449, 0.156912, 1.000000)]))
+
+(apply comment
+    Comment
+    (italic)
+    (color [rgba(0.345215, 0.431224, 0.459136, 1.000000)]))
+
+(apply constant
+    Constant
+    (color [rgba(0.687365, 0.266718, 0.132595, 1.000000)]))
+
+(apply entity
+    Entity
+    (color [rgba(0.687365, 0.266718, 0.132595, 1.000000)]))
+
+(apply keyword
+    Keyword
+    (color [rgba(0.471409, 0.515281, 0.075981, 1.000000)]))
+
+(apply storage
+    Storage
+    (color [rgba(0.514856, 0.561128, 0.561921, 1.000000)]))
+
+(apply string
+    String
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply support
+    Support
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply variable
+    Variable
+    (color [rgba(0.458824, 0.529412, 0.650980, 1.000000)]))
+
+(apply invalid.deprecated
+    [Invalid – Deprecated]
+    (italic)
+    (underline)
+    (color [rgba(0.823529, 0.658824, 0.631373, 1.000000)]))
+
+(apply invalid.illegal
+    [Invalid – Illegal]
+    (color [rgba(0.972549, 0.972549, 0.972549, 1.000000)])
+    (background [rgba(0.337255, 0.176471, 0.337255, 0.749020)]))
+
+(apply [text source]
+    [♦ Embedded Source]
+    (background [rgba(0.690196, 0.701961, 0.729412, 0.078431)]))
+
+(apply [text.html.ruby source]
+    [♦ Embedded Source (Bright)]
+    (background [rgba(0.694118, 0.701961, 0.729412, 0.129412)]))
+
+(apply entity.other.inherited-class
+    [♦ Entity inherited-class]
+    (italic)
+    (color [rgba(0.628423, 0.463990, 0.100500, 1.000000)]))
+
+(apply [string source]
+    [♦ String embedded-source]
+    (color [rgba(0.471409, 0.515281, 0.075981, 1.000000)]))
+
+(apply [string constant]
+    [♦ String constant]
+    (color [rgba(0.628423, 0.463990, 0.100500, 1.000000)]))
+
+(apply string.regexp
+    [♦ String.regexp]
+    (color [rgba(0.913725, 0.752941, 0.384314, 1.000000)]))
+
+(apply [string.regexp constant.character.escape, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition]
+    [♦ String.regexp.«special»]
+    (color [rgba(0.811765, 0.490196, 0.203922, 1.000000)]))
+
+(apply [string variable]
+    [♦ String variable]
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply support.function
+    [♦ Support.function]
+    (color [rgba(0.854902, 0.815686, 0.521569, 1.000000)]))
+
+(apply support.constant
+    [♦ Support.constant]
+    (color [rgba(0.811765, 0.415686, 0.298039, 1.000000)]))
+
+(apply meta.preprocessor.c
+    [c C/C++ Preprocessor Line]
+    (color [rgba(0.537255, 0.588235, 0.658824, 1.000000)]))
+
+(apply [meta.preprocessor.c keyword]
+    [c C/C++ Preprocessor Directive]
+    (color [rgba(0.686275, 0.768627, 0.858824, 1.000000)]))
+
+(apply [meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string]
+    [✘ Doctype/XML Processing]
+    (color [rgba(0.286275, 0.286275, 0.286275, 1.000000)]))
+
+(apply [declaration.tag, declaration.tag entity, meta.tag, meta.tag entity]
+    [✘ Meta.tag.«all»]
+    (color [rgba(0.674510, 0.533333, 0.356863, 1.000000)]))
+
+(apply [declaration.tag.inline, declaration.tag.inline entity, source entity.name.tag, source entity.other.attribute-name, meta.tag.inline, meta.tag.inline entity]
+    [✘ Meta.tag.inline]
+    (color [rgba(0.878431, 0.772549, 0.537255, 1.000000)]))
+
+(apply [meta.selector.css entity.name.tag]
+    [§ css tag-name]
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply [meta.selector.css entity.other.attribute-name.tag.pseudo-class]
+    [§ css:pseudo-class]
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply [meta.selector.css entity.other.attribute-name.id]
+    [§ css#id]
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply [meta.selector.css entity.other.attribute-name.class]
+    [§ css.class]
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply support.type.property-name.css
+    [§ css property-name:]
+    (color [rgba(0.628423, 0.463990, 0.100500, 1.000000)]))
+
+(apply [meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css]
+    [§ css property-value;]
+    (color [rgba(0.914184, 0.885970, 0.801890, 1.000000)]))
+
+(apply [meta.preprocessor.at-rule keyword.control.at-rule]
+    [§ css @at-rule]
+    (color [rgba(0.514856, 0.561128, 0.561921, 1.000000)]))
+
+(apply [meta.property-value support.constant.named-color.css, meta.property-value constant]
+    [§ css additional-constants]
+    (color [rgba(0.687365, 0.266718, 0.132595, 1.000000)]))
+
+(apply meta.constructor.argument.css
+    [§ css constructor.argument]
+    (color [rgba(0.247755, 0.548627, 0.517428, 1.000000)]))
+
+(apply [meta.diff, meta.diff.header, meta.separator]
+    [⎇ diff.header]
+    (italic)
+    (color [rgba(0.972549, 0.972549, 0.972549, 1.000000)])
+    (background [rgba(0.054902, 0.133333, 0.192157, 1.000000)]))
+
+(apply markup.deleted
+    [⎇ diff.deleted]
+    (color [rgba(0.972549, 0.972549, 0.972549, 1.000000)])
+    (background [rgba(0.258824, 0.054902, 0.035294, 1.000000)]))
+
+(apply markup.changed
+    [⎇ diff.changed]
+    (color [rgba(0.972549, 0.972549, 0.972549, 1.000000)])
+    (background [rgba(0.290196, 0.254902, 0.050980, 1.000000)]))
+
+(apply markup.inserted
+    [⎇ diff.inserted]
+    (color [rgba(0.972549, 0.972549, 0.972549, 1.000000)])
+    (background [rgba(0.145098, 0.231373, 0.133333, 1.000000)]))
+
+(apply markup.list
+    [Markup: List]
+    (color [rgba(0.976471, 0.933333, 0.596078, 1.000000)]))
+
+(apply markup.heading
+    [Markup: Heading]
+    (color [rgba(0.687365, 0.266718, 0.132595, 1.000000)]))
